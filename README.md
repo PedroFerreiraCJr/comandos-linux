@@ -56,3 +56,54 @@ O comando **whoami** mostra na saída padrão o nome do usuário atual.
 ```bash
 $ whoami
 ```
+
+## cd
+Com o comando **cd** é possível fazer a navegação nos diretórios do sistema linux.
+```bash
+$ cd /
+```
+O comando acima faz com que o diretório atual seja alterado para o (**/**), ou diretório raiz do sistema.
+
+```bash
+$ cd $HOME
+```
+O comando acima navega para o diretório que é a raiz do usuário atual. O mesmo resultado pode ser obtido simplesmente digitando somente **cd** no terminal, por padrão, o comando **cd** volta para o diretório que é o *home* do usuário atual logado no sistema.
+```bash
+$ cd ..
+```
+O comando acima, navega para o diretório acima do diretório atual.
+
+## mkdir
+O comando **mkdir** cria um diretório na pasta atual do usuário.
+```bash
+$ mkdir workspace
+```
+O comando acima cria o diretório *workspace* na pasta atual.
+
+## rmdir
+O comando **rmdir** remove o diretório informado como parâmetro do comando.
+```bash
+$ rmdir workspace
+```
+O comando acima remove o diretório *workspace* informado, caso esteja vazio.
+
+
+## rm
+O comando **rm** remove o arquivo/diretório informado como parâmetro do comando.
+```bash
+$ rm file.txt
+```
+O comando acima remove o arquivo *file.txt*, informado.
+
+O comando **rm** ainda pode receber como parâmetro **-r** para apagar o diretório informado de forma recursiva, ou seja, os diretório internos a pasta informada serão apagados, e posteriormente o diretório informado para o comando.
+```bash
+$ rm -r workspace
+```
+O comando acima remove o diretório workspace totalmente, mesmo que contenha arquivos ou pastas dentro dele.
+
+Os símbolos **?**, **\***, são interpretados de forma diferente, pois são considerador wildcards, ou simbolos especiais que podem denotar, *um caracter*, ou *multiplos caracteres* respectivamente.
+Por exemplo, para apagar todos os arquivos com a extensão *.txt* no diretório workspace, segue o comando:
+```bash
+$ rm workspace/*.txt
+```
+O comando acima remove todos os arquivos com a extensão *.txt*, mas não remove a pasta.
