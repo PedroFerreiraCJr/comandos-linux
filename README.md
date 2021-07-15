@@ -1,4 +1,12 @@
-# Exemplos de Comandos Básicos do Linux
+<h1 align="center">Comandos Básicos do Linux</h1>
+  Repositório contendo uma referência a comandos básicos utilizados no dia a dia no terminal linux.
+<br/>
+
+<p align="center">
+  <img width="460" height="300" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Openlogo-debianV2.svg">
+</p>
+
+
 ## pwd
 O comando **pwd** tem como saída o diretório atual do usuário.
 ```bash
