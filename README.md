@@ -107,3 +107,56 @@ Por exemplo, para apagar todos os arquivos com a extensão *.txt* no diretório 
 $ rm workspace/*.txt
 ```
 O comando acima remove todos os arquivos com a extensão *.txt*, mas não remove a pasta.
+
+## cp
+Com o comando **cp** é possível fazer a cópia de arquivos ou diretórios. O comando **cp** recebe dois parâmetros, o primeiro é o arquivo/diretório de origem, e o segundo o nome do arquivo/diretório de destino.
+```bash
+$ cp file.txt file_copy.txt
+```
+O comando acima faz uma cópia do arquivo *file.txt* para o arquivo *file_copy.txt*
+
+```bash
+$ cp -r workspace/ workspace-bkp/
+```
+O comando acima faz uma cópia do diretório *workspace/* para o diretório *workspace-bkp/*
+
+## mv
+O comando **mv**, move os arquivos informados como parâmetro de linha de comando para o diretório de destino. Condicionalmente, o comando também renomeia o arquivo/diretório informado. Quando o primeiro parâmetro é um arquivo, e o destino é uma pasta, o arquivo informado é movido para a pasta. Quando o primeiro parâmetro é um arquivo e o segundo parâmetro não é uma pasta encontrada no sistema de arquivos, o arquivo é renomeado. Quando o primeiro parâmetro é um diretório, e o segundo parâmetro também é um diretório, o diretório de origem vai ser movido para o de destino.
+```bash
+$ mv file.txt workspace/
+```
+O comando acima, move o arquivo *file.txt* para o diretório *workspace/*.
+
+```bash
+$ mv -r workspace/ bkp/
+```
+O comando acima, move o diretório *workspace/* para o diretório *bkp/*.
+
+## zip
+Com o comando **zip** é possível criar arquivos compactados no formato .zip.
+```bash
+$ zip -r work.zip workspace/
+```
+O comando acima, cria um arquivo compactado chamado *work.zip*, contendo todo o conteúdo do diretório *workspace/*, e para cada arquivo que deve ser processado, gera uma saída no console.
+
+```bash
+$ zip -qr work.zip workspace/
+```
+O comando acima, cria um arquivo compactado chamado *work.zip*, contendo todo o conteúdo do diretório *workspace/*, mas sem gerar saída no console.
+
+## unzip
+Com o comando **unzip** é possível visualizar, e extrair arquivos compactados no formato .zip.
+```bash
+$ unzip -l work.zip
+```
+O comando acima, lista os arquivos e diretórios contidos no arquivo *work.zip*.
+
+```bash
+$ unzip work.zip
+```
+O comando acima, extrai os arquivos e diretórios contidos no arquivo *work.zip*.
+
+```bash
+$ unzip -q work.zip
+```
+O comando acima, extrai os arquivos e diretórios contidos no arquivo *work.zip*, mas sem gerar saída no console.
