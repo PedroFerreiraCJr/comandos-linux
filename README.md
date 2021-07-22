@@ -160,3 +160,90 @@ O comando acima, extrai os arquivos e diretórios contidos no arquivo *work.zip*
 $ unzip -q work.zip
 ```
 O comando acima, extrai os arquivos e diretórios contidos no arquivo *work.zip*, mas sem gerar saída no console.
+
+## tar
+O comando **tar** é semelhante ao comando **zip**, no entanto, o comando **zip** é mais utilizado em plataformas *Windows*. Para criar um arquivo compactado com o utilitário **tar**, use o seguite:
+```bash
+$ tar -cz workspace/ -f workspace.tar.gz
+```
+O comando acima gera um arquivo compactado no formato *tar.gz* a partir do diretório *workspace/*, tendo como resultado o arquivo *workspace.tar.gz*.
+
+Vale lembrar que, por padrão, o comando **tar** já é recursivo.
+
+Outra forma muito utilizada desse comando é com o redirecionamento da saída para um arquivo, ao invés de fornecer a flag *-f*.
+```bash
+$ tar -cz workspace/ > workspace.tar.gz
+```
+
+O comando **tar** também serve para fazer a extração de arquivos no formato *tar.gz*.
+```bash
+$ tar -xz < workspace.tar.gz
+```
+O comando acima, extrai o arquivo que foi fornecido a partir da entrada padrão do sistema.
+
+Outra altenativas seria:
+```bash
+$ tar -xzf workspace.tar.gz
+```
+O comando acima recebe o parâmetro *-f* indicando que o próximo valor informado é o arquivo que deve ser extraído.
+
+Por padrão o comando **tar** é silencioso, portanto, para alterar o nível de logging do comando, utiliza-se o parâmetro *-v*. Segue exemplo:
+```bash
+$ tar -vxzf workspace.tar.gz
+```
+O comando acima recebe o parâmetro *-v* indicando que deve gerar um log avisando sobre qual arquivo está sendo processado no momento.
+
+Para utilizar a compactação no formato *.bzip2* simplesmente altere o parâmetro *-z*, por *-j*, no comando de compactação utilizando o utilitário **tar**.
+```bash
+$ tar -cjf workspace.tar.bz2 workspace/
+```
+Compacta o diretório *workspace* de forma recursiva utilizando gerando o arquivo *workspace.tar.bz2*.
+
+## touch
+O comando **touch** serve para alterar a data da última modificação no arquivo fornecido em linha de comando, por exemplo, para o momento atual.
+```bash
+$ touch arquivo.txt
+```
+É possível visualizar a alteração na data, utilizando o comando **ls**.
+
+## date
+Com o comando **date** serve para visualizar ou alterar a data atual do sistema.
+```bash
+$ date
+```
+Para visualizar a data em um formato diferente, é possível formatar a data. Segue exemplo:
+```bash
+$ date "+%d/%m/%Y"
+```
+Mostra a data no formato *dia/mes/ano*.
+
+## head
+Com o comando **head** lê um arquivo a partir do começo do arquivo, mas com uma leitura limitada a *10 linhas*, por padrão.
+```bash
+$ head arquivo.txt
+```
+Lê as 10 primeiras linhas do arquivo.
+
+```bash
+$ head -n 30 arquivo.txt
+```
+Lê as 30 primeiras linhas do *arquivo.txt*. O parâmetro *-n* é utilizado para indicar a quantidade de linhas a serem lidas.
+
+## tail
+O comando **tail** lê um arquivo a partir do começo do final, mas com uma leitura limitada a *10 linhas*, por padrão.
+```bash
+$ tail arquivo.txt
+```
+Lê as 10 últimas linhas do arquivo.
+
+```bash
+$ tail -n 30 arquivo.txt
+```
+Lê as 30 últimas linhas do *arquivo.txt*. O parâmetro *-n* é utilizado para indicar a quantidade de linhas a serem lidas.
+
+## less
+O comando **less** serve para navegar no arquivo, lendo o arquivo no terminal, utilizando as setas para ir para o início do arquivo e para o final do arquivo.
+```bash
+$ less arquivo.txt
+```
+Abre o arquivo e permite interação com o usuário utilizando as setas do teclado para navegar no *arquivo.txt*.
