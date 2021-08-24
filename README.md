@@ -3,7 +3,7 @@
 <br/>
 
 <p align="center">
-  <img width="460" height="300" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Openlogo-debianV2.svg">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/PedroFerreiraCJr/comandos-linux-samples/4272f30b1ffaacbded6ac39c17cbb6995b81f02a/logo_debian.svg">
 </p>
 
 
